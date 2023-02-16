@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import { useState } from 'react';
 import './App.css';
+import Rating from './components/Rating'
+import Thank from './components/Thank'
+function App() {
 
-class App extends Component {
-  render() {
+    const [rating, setRating] = useState()
+    const [submit, setSubmit] = useState(false)
     return (
-      <div className=
-        'app absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] flex '>
-
-          
+      <div>
+      {!submit ? 
+      <Rating rating={rating} setRating={setRating} setSubmit={setSubmit}/>
+      : <Thank rating={rating} />
+      }
       </div>
     );
-  }
+
 }
 
 export default App;

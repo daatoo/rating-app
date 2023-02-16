@@ -1,0 +1,1 @@
+// export const StarIcon = require('./icon-star.svg')
